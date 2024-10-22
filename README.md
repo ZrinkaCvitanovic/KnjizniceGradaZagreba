@@ -1,6 +1,6 @@
 # KnjizniceGradaZagreba
 
-Ovaj repozitorij sadrži otvoren skup podatka o knjižnicama u Gradu Zagrebu. U njemu se nalaze neke korisne informacije za korisnike knjižnica. Svi se podatci mogu naći na njihovoj [službenoj stranici](https://www.kgz.hr/hr/knjiznice/45), ali su ovdje skupjeni na jedno mjesto. Trenutno nisu dostupne informacije o svim knjižnicama, već o onima koje autor smatra najposjećenijima. Podatci su pisani na hrvatskom jeziku. Za svaku knjižnicu izdvojeni su:  
+Ovaj repozitorij sadrži otvoren skup podatka o knjižnicama u Gradu Zagrebu. U njemu se nalaze neke korisne informacije za korisnike knjižnica. Svi se podatci mogu naći na njihovoj [službenoj stranici](https://www.kgz.hr/hr/knjiznice/45), ali su ovdje skupjeni na jedno mjesto. Trenutno nisu dostupne informacije o svim knjižnicama, već o onima koje autor smatra najposjećenijima. Podatci su pisani na hrvatskom jeziku i u formatu JSON. Za svaku knjižnicu izdvojeni su:  
 
 **Naziv**: string  
 **Adresa**: string  
@@ -16,7 +16,6 @@ Ovaj repozitorij sadrži otvoren skup podatka o knjižnicama u Gradu Zagrebu. U 
 Autor: Zrinka Cvitanović   
 Trenutna verzija: 1.0  
 
-Svi su podatci preuzeti sa .
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

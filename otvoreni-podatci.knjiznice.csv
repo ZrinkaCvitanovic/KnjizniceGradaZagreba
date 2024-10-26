@@ -1,0 +1,11 @@
+_id,Naziv,Adresa,Kontakt_telefon,Kontakt_mail,Voditelj,Radno_vrijeme_pon-pet,Radno_vrijeme_subota,Nudi_wifi,Nudi_računalo,Nudi_tople_napitke
+671caaed3beaea3554087a98,Gradska knjižnica,Starčevićev trg 6,+385 1 4572 084,gradska.knjiznica@kgz.hr,Ismena Meić,8:00 - 20:00,8:00 - 14:00,da,da,da
+671caaed3beaea3554087a99,Knjižnica Božidara Adžije,Trg kralja Petra Krešimira IV. 2,+385 1 4655 025,knjiznica.bozidara.adzije@kgz.hr,Ivan Jelić,8:00 - 20:00,8:00 - 14:00,da,da,da
+671caaed3beaea3554087a9a,Knjižnica Tina Ujevića,Ulica grada Vukovara 14,+385 1 3095 221,knjiznica.tina.ujevica@kgz.hr,Lucija Hodžajev,8:00 - 20:00,8:00 - 14:00,da,da,ne
+671caaed3beaea3554087a9b,Knjižnica Knežija,Albaharijeva 7,+385 1 3837 246,knjiznica.knezija@kgz.hr,Dražena Šola Vrbanek,8:00 - 20:00,8:00 - 14:00,da,ne,ne
+671caaed3beaea3554087a9c,Knjižnica Ljubljanica,Ljubljanica 24,+385 1 3640 987,knjiznica.ljubljanica@kgz.hr,Marija Popović,8:00 - 20:00,8:00 - 14:00,ne,da,ne
+671caaed3beaea3554087a9d,Knjižnica Prečko,Slavenskoga 12,+385 1 3879 084,knjiznica.precko@kgz.hr,Stjepana Skender,8:00 - 20:00,8:00 - 14:00,da,da,ne
+671caaed3beaea3554087a9e,Knjižnica Staglišće,A. Prosenika 7,+385 1 3664 268,knjiznica.staglisce@kgz.hr,Aleksandra Franković,8:00 - 20:00,8:00 - 14:00,da,da,ne
+671caaed3beaea3554087a9f,Knjižnica Voltino,Dragutina Golika 36,+ 385 1 3665 668,knjiznica.voltino@kgz.hr,Ana Bakarić,8:00 - 20:00,8:00 - 14:00,da,da,ne
+671caaed3beaea3554087aa0,Knjižnica Marije Jurić Zagorke,Krvavi most 2,+385 1 4813 993,knjiznica.m.j.zagorke@kgz.hr,Maja Pranić,8:00 - 20:00,8:00 - 14:00,da,da,ne
+671caaed3beaea3554087aa1,Knjižnica i čitaonica Bogdana Ogrizovića,Preradovićeva 5,+385 1 4810 704,knjiznica.bogdana.ogrizovica@kgz.hr,dr. sc. Jasna Kovačević,8:00 - 20:00,8:00 - 14:00,da,da,ne

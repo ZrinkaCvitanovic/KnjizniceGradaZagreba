@@ -1,0 +1,93 @@
+
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "Knjiznice grada Zagreba",
+    "description": "Popis nekih knjižnica u Zagrebu i osnovnih podataka o njima",
+    "items": {
+        "type": "object",
+        "title": "Knjiznica",
+        "required": [
+            "_id",
+            "Naziv",
+            "Adresa",
+            "Kontakt_telefon",
+            "Kontakt_mail",
+            "Voditelj",
+            "radno_vrijeme",
+            "Nudi_wifi",
+            "Nudi_racunalo",
+            "Nudi_tople_napitke"
+        ],
+        "properties": {
+            "_id": {
+                "type": "object",
+                "title": "_id",
+                "required": [
+                    "$oid"
+                ],
+                "properties": {
+                    "$oid": {
+                        "type": "string",
+                        "title": "The $oid Schema"
+                    }
+                }
+            },
+            "Naziv": {
+                "type": "string",
+                "title": "Naziv"
+            },
+            "Adresa": {
+                "type": "string",
+                "title": "Adresa"
+            },
+            "Kontakt_telefon": {
+                "type": "string",
+                "title": "Kontakt_telefon"
+            },
+            "Kontakt_mail": {
+                "type": "string",
+                "title": "Kontakt_mail"
+            },
+            "Voditelj": {
+                "type": "string",
+                "title": "Voditelj"
+            },
+            "radno_vrijeme": {
+                "type": "array",
+                "title": "radno_vrijeme",
+                "items": {
+                    "type": "object",
+                    "title": "radno_vrijeme",
+                    "required": [
+                        "dani",
+                        "sati"
+                    ],
+                    "properties": {
+                        "dani": {
+                            "type": "string",
+                            "title": "dani"
+                        },
+                        "sati": {
+                            "type": "string",
+                            "title": "sati"
+                        }
+                    }
+                }
+            },
+            "Nudi_wifi": {
+                "type": "string",
+                "title": "Nudi_wifi"
+            },
+            "Nudi_racunalo": {
+                "type": "string",
+                "title": "Nudi_racunalo"
+            },
+            "Nudi_tople_napitke": {
+                "type": "string",
+                "title": "Nudi_tople_napitke"
+            }
+        }
+    }
+}

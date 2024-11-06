@@ -1,4 +1,4 @@
-_id,Naziv,Adresa,Kontakt_telefon,Kontakt_mail,Voditelj,radno_vrijeme[0].dani,radno_vrijeme[1].dani,radno_vrijeme[0].sati,radno_vrijeme[1].sati,Nudi_wifi,Nudi_računalo,Nudi_tople_napitke
+_id,Naziv,Adresa,Kontakt_telefon,Kontakt_mail,Voditelj,radno_vrijeme[0].dani,radno_vrijeme[1].dani,radno_vrijeme[0].sati,radno_vrijeme[1].sati,Nudi_wifi,Nudi_racunalo,Nudi_tople_napitke
 671ccddbeb9699770222ac6e,Gradska knjižnica,Starčevićev trg 6,+385 1 4572 084,gradska.knjiznica@kgz.hr,Ismena Meić,pon-pet,subota,8:00 - 20:00,8:00 - 14:00,da,da,da
 671ccddbeb9699770222ac6f,Knjižnica Božidara Adžije,Trg kralja Petra Krešimira IV. 2,+385 1 4655 025,knjiznica.bozidara.adzije@kgz.hr,Ivan Jelić,pon-pet,subota,8:00 - 20:00,8:00 - 14:00,da,da,da
 671ccddbeb9699770222ac70,Knjižnica Tina Ujevića,Ulica grada Vukovara 14,+385 1 3095 221,knjiznica.tina.ujevica@kgz.hr,Lucija Hodžajev,pon-pet,subota,8:00 - 20:00,8:00 - 14:00,da,da,ne

@@ -18,7 +18,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "da"
 },
 {
@@ -41,7 +41,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "da"
 },
 {
@@ -64,7 +64,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -87,7 +87,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "ne",
+  "Nudi_racunalo": "ne",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -110,7 +110,7 @@
     }
   ],
   "Nudi_wifi": "ne",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -133,7 +133,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -156,7 +156,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -179,7 +179,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -202,7 +202,7 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 },
 {
@@ -225,6 +225,6 @@
     }
   ],
   "Nudi_wifi": "da",
-  "Nudi_računalo": "da",
+  "Nudi_racunalo": "da",
   "Nudi_tople_napitke": "ne"
 }]

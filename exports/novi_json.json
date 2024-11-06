@@ -1,1 +1,232 @@
-[{"_id":{"$oid":"671ccddbeb9699770222ac6e"},"Naziv":"Gradska knjižnica","Adresa":"Starčevićev trg 6","Kontakt_telefon":"+385 1 4572 084","Kontakt_mail":"gradska.knjiznica@kgz.hr","Voditelj":"Ismena Meić","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"da"},{"_id":{"$oid":"671ccddbeb9699770222ac6f"},"Naziv":"Knjižnica Božidara Adžije","Adresa":"Trg kralja Petra Krešimira IV. 2","Kontakt_telefon":"+385 1 4655 025","Kontakt_mail":"knjiznica.bozidara.adzije@kgz.hr","Voditelj":"Ivan Jelić","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"da"},{"_id":{"$oid":"671ccddbeb9699770222ac70"},"Naziv":"Knjižnica Tina Ujevića","Adresa":"Ulica grada Vukovara 14","Kontakt_telefon":"+385 1 3095 221","Kontakt_mail":"knjiznica.tina.ujevica@kgz.hr","Voditelj":"Lucija Hodžajev","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac71"},"Naziv":"Knjižnica Knežija","Adresa":"Albaharijeva 7","Kontakt_telefon":"+385 1 3837 246","Kontakt_mail":"knjiznica.knezija@kgz.hr","Voditelj":"Dražena Šola Vrbanek","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"ne","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac72"},"Naziv":"Knjižnica Ljubljanica","Adresa":"Ljubljanica 24","Kontakt_telefon":"+385 1 3640 987","Kontakt_mail":"knjiznica.ljubljanica@kgz.hr","Voditelj":"Marija Popović","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"ne","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac73"},"Naziv":"Knjižnica Prečko","Adresa":"Slavenskoga 12","Kontakt_telefon":"+385 1 3879 084","Kontakt_mail":"knjiznica.precko@kgz.hr","Voditelj":"Stjepana Skender","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac74"},"Naziv":"Knjižnica Staglišće","Adresa":"A. Prosenika 7","Kontakt_telefon":"+385 1 3664 268","Kontakt_mail":"knjiznica.staglisce@kgz.hr","Voditelj":"Aleksandra Franković","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac75"},"Naziv":"Knjižnica Voltino","Adresa":"Dragutina Golika 36","Kontakt_telefon":"+385 1 3665 668","Kontakt_mail":"knjiznica.voltino@kgz.hr","Voditelj":"Ana Bakarić","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac76"},"Naziv":"Knjižnica Marije Jurić Zagorke","Adresa":"Krvavi most 2","Kontakt_telefon":"+385 1 4813 993","Kontakt_mail":"knjiznica.m.j.zagorke@kgz.hr","Voditelj":"Maja Pranić","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"},{"_id":{"$oid":"671ccddbeb9699770222ac77"},"Naziv":"Knjižnica i čitaonica Bogdana Ogrizovića","Adresa":"Preradovićeva 5","Kontakt_telefon":"+385 1 4810 704","Kontakt_mail":"knjiznica.bogdana.ogrizovica@kgz.hr","Voditelj":"dr. sc. Jasna Kovačević","radno_vrijeme":[{"dani":"pon-pet","sati":"8:00 - 20:00"},{"dani":"subota","sati":"8:00 - 14:00"}],"Nudi_wifi":"da","Nudi_računalo":"da","Nudi_tople_napitke":"ne"}]
+[
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac6e"
+      },
+      "Naziv": "Gradska knjižnica",
+      "Adresa": "Starčevićev trg 6",
+      "Kontakt_telefon": "+385 1 4572 084",
+      "Kontakt_mail": "gradska.knjiznica@kgz.hr",
+      "Voditelj": "Ismena Meić",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "da"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac6f"
+      },
+      "Naziv": "Knjižnica Božidara Adžije",
+      "Adresa": "Trg kralja Petra Krešimira IV. 2",
+      "Kontakt_telefon": "+385 1 4655 025",
+      "Kontakt_mail": "knjiznica.bozidara.adzije@kgz.hr",
+      "Voditelj": "Ivan Jelić",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "da"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac70"
+      },
+      "Naziv": "Knjižnica Tina Ujevića",
+      "Adresa": "Ulica grada Vukovara 14",
+      "Kontakt_telefon": "+385 1 3095 221",
+      "Kontakt_mail": "knjiznica.tina.ujevica@kgz.hr",
+      "Voditelj": "Lucija Hodžajev",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac71"
+      },
+      "Naziv": "Knjižnica Knežija",
+      "Adresa": "Albaharijeva 7",
+      "Kontakt_telefon": "+385 1 3837 246",
+      "Kontakt_mail": "knjiznica.knezija@kgz.hr",
+      "Voditelj": "Dražena Šola Vrbanek",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "ne",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac72"
+      },
+      "Naziv": "Knjižnica Ljubljanica",
+      "Adresa": "Ljubljanica 24",
+      "Kontakt_telefon": "+385 1 3640 987",
+      "Kontakt_mail": "knjiznica.ljubljanica@kgz.hr",
+      "Voditelj": "Marija Popović",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "ne",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac73"
+      },
+      "Naziv": "Knjižnica Prečko",
+      "Adresa": "Slavenskoga 12",
+      "Kontakt_telefon": "+385 1 3879 084",
+      "Kontakt_mail": "knjiznica.precko@kgz.hr",
+      "Voditelj": "Stjepana Skender",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac74"
+      },
+      "Naziv": "Knjižnica Staglišće",
+      "Adresa": "A. Prosenika 7",
+      "Kontakt_telefon": "+385 1 3664 268",
+      "Kontakt_mail": "knjiznica.staglisce@kgz.hr",
+      "Voditelj": "Aleksandra Franković",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac75"
+      },
+      "Naziv": "Knjižnica Voltino",
+      "Adresa": "Dragutina Golika 36",
+      "Kontakt_telefon": "+385 1 3665 668",
+      "Kontakt_mail": "knjiznica.voltino@kgz.hr",
+      "Voditelj": "Ana Bakarić",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac76"
+      },
+      "Naziv": "Knjižnica Marije Jurić Zagorke",
+      "Adresa": "Krvavi most 2",
+      "Kontakt_telefon": "+385 1 4813 993",
+      "Kontakt_mail": "knjiznica.m.j.zagorke@kgz.hr",
+      "Voditelj": "Maja Pranić",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    },
+    {
+      "_id": {
+        "$oid": "671ccddbeb9699770222ac77"
+      },
+      "Naziv": "Knjižnica i čitaonica Bogdana Ogrizovića",
+      "Adresa": "Preradovićeva 5",
+      "Kontakt_telefon": "+385 1 4810 704",
+      "Kontakt_mail": "knjiznica.bogdana.ogrizovica@kgz.hr",
+      "Voditelj": "dr. sc. Jasna Kovačević",
+      "radno_vrijeme": [
+        {
+          "dani": "pon-pet",
+          "sati": "8:00 - 20:00"
+        },
+        {
+          "dani": "subota",
+          "sati": "8:00 - 14:00"
+        }
+      ],
+      "Nudi_wifi": "da",
+      "Nudi_racunalo": "da",
+      "Nudi_tople_napitke": "ne"
+    }
+  ]

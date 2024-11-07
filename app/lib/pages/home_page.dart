@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:web_library_fe/pages/widgets/library_list_actions.dart';
 import 'package:web_library_fe/pages/widgets/library_table.dart';
@@ -9,6 +9,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    html.document.getElementById('tablica')?.setAttribute('id', 'tablica');
+
     return Scaffold(
       body: SafeArea(
         child: Container(

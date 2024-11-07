@@ -70,9 +70,12 @@ class StartPage extends StatelessWidget {
                             fontSize: 18,
                             fontFamily: 'Merriweather',
                           ),
-                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 120),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 120),
                         ),
-                        onPressed: () => _redirectToHomePage(context),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/datatable');
+                        },
                         child: const Text('Pretraga'),
                       ),
                     ],

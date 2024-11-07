@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:web_library_fe/pages/start_page.dart';
+import 'package:web_library_fe/pages/home_page.dart';
 
 void main() async => runApp(ProviderScope(child: const MainApp()));
 
@@ -15,7 +16,18 @@ class MainApp extends StatelessWidget {
         fontFamily: 'Merriweather',
         colorSchemeSeed: Colors.blue,
       ),
-      home: const StartPage(),
+      initialRoute: '/', // Home route
+      routes: {
+        '/': (context) =>
+            const StartPage(), // StartPage is your home screen or welcome page
+        '/datatable': (context) =>
+            const HomePage(), // This is the route for the data table page
+      },
+      builder: (context, child) {
+        return Scaffold(
+          body: child,
+        );
+      },
     );
   }
 }

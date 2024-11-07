@@ -12,6 +12,7 @@ dependencies:
   dio: ^5.7.0
   flutter_riverpod: ^2.6.1
   csv: ^6.0.0
+  html: ^0.15.5
 
 dev_dependencies:
   flutter_test:

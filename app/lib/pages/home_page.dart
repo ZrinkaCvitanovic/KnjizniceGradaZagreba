@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                     Text(
                       "Popis knjižnica",
                       style: TextStyle(
-                        fontSize: 54,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

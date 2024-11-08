@@ -7,8 +7,8 @@ const port = 3000;
 
 app.use(cors());
 
-// const mongoUrl = 'mongodb://testuser:password@mongodb:27017'; //for docker
-const mongoUrl = 'mongodb://testuser:password@localhost:27017'; //for local
+const mongoUrl = 'mongodb://testuser:password@mongodb:27017'; //for docker
+//const mongoUrl = 'mongodb://testuser:password@localhost:27017'; //for local
 
 const dbName = 'podaci';
 let db;

@@ -16,12 +16,10 @@ class MainApp extends StatelessWidget {
         fontFamily: 'Merriweather',
         colorSchemeSeed: Colors.blue,
       ),
-      initialRoute: '/', // Home route
+      initialRoute: '/',
       routes: {
-        '/': (context) =>
-            const StartPage(), // StartPage is your home screen or welcome page
-        '/datatable': (context) =>
-            const HomePage(), // This is the route for the data table page
+        '/': (context) => const StartPage(),
+        '/datatable': (context) => const HomePage(),
       },
       builder: (context, child) {
         return Scaffold(

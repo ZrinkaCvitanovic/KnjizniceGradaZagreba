@@ -21,13 +21,11 @@ class HomePage extends StatelessWidget {
             ),
           ),
           width: double.maxFinite,
-          //padding: const EdgeInsets.symmetric(vertical: 250, horizontal: 40),
           child: ClipRRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
               child: Container(
                 decoration: BoxDecoration(
-                  //color: Colors.grey.shade200.withOpacity(0.5),
                   gradient: LinearGradient(
                     colors: [
                       Colors.white.withOpacity(0.9),

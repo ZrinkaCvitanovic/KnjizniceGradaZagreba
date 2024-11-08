@@ -2,12 +2,18 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:web_library_fe/pages/home_page.dart';
+import 'package:universal_html/html.dart' as html;
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    html.document.title = 'Start page';
+    html.MetaElement description = html.MetaElement();
+    description.name = 'Zrinka Cvitanović';
+    description.content = 'Pocetna stranica';
+    html.document.head?.append(description);
     return Scaffold(
       body: Container(
         width: double.maxFinite,

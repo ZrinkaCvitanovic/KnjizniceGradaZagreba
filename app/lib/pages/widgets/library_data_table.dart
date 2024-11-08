@@ -9,10 +9,10 @@ class LibraryDataTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        scrollDirection: Axis.vertical, // Enables vertical scrolling
+        scrollDirection: Axis.vertical,
         child: DataTable(
-          columnSpacing: 20, // Adjusts spacing between columns, if needed
-          dataRowMinHeight: 20, // Adjusts the height of each data row
+          columnSpacing: 20,
+          dataRowMinHeight: 20,
           columns: const [
             DataColumn(
               label:

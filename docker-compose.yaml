@@ -19,10 +19,10 @@ services:
 
   backend:
     build:
-      context: ./backend  # Assuming your backend code is in the 'backend' folder
+      context: ./backend  
     container_name: backend
     environment:
-      - MONGO_URI=mongodb://mongodb:27017/mydb  # Adjust for your MongoDB connection
+      - MONGO_URI=mongodb://mongodb:27017/mydb  
     ports:
       - "3000:3000"
     networks:
@@ -30,10 +30,9 @@ services:
     depends_on:
       - mongodb
 
-  # Frontend Service (Flutter Web App)
   frontend:
     build:
-      context: ./app  # Assuming your Flutter web code is in the 'frontend' folder
+      context: ./app 
     container_name: frontend
     ports:
       - "80:80"

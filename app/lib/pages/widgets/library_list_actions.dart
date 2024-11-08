@@ -19,19 +19,15 @@ class _LibraryFilterState extends ConsumerState<LibraryListActions> {
   @override
   void initState() {
     super.initState();
-    // Use post-frame callback to ensure DOM is ready
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // This will be called after the widget tree has been built.
       _addIdsToElements();
     });
   }
 
   void _addIdsToElements() {
-    // Here, we're adding the ID attributes to the elements after they have been rendered
     html.document.getElementById('pretraga')?.setAttribute('id', 'pretraga');
-    html.document.getElementById('atribu')?.setAttribute('id', 'atribut');
+    html.document.getElementById('atribut')?.setAttribute('id', 'atribut');
     html.document.getElementById('reset')?.setAttribute('id', 'reset');
-    // Add other elements here if needed
   }
 
   @override

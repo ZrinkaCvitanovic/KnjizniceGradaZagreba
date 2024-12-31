@@ -5,9 +5,22 @@
         "description": "API for managing library information",
         "version": "3.0.0"
     },
+    "tags": [
+        {
+            "name": "single",
+            "description": "Operations related to single elements",
+        },
+        {
+            "name": "collection",
+            "description": "Operations related to more elements"
+        }
+    ],
     "paths": {
         "/api/library/all": {
             "get": {
+                "tags": [
+                    "collection"
+                ],
                 "summary": "Get all libraries",
                 "description": "Returns a list of all libraries.",
                 "responses": {
@@ -17,7 +30,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "array",
-                                    "items": {
+                                    "response": {
                                         "$ref": "#/components/schemas/Library"
                                     }
                                 }
@@ -29,6 +42,9 @@
         },
         "/api/library/{id}": {
             "get": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Get library by ID",
                 "description": "Returns a single library by its ID.",
                 "parameters": [
@@ -39,6 +55,20 @@
                         "description": "The ID of the library",
                         "schema": {
                             "type": "string"
+                        },
+                        "examples": {
+                            "firstLibrary": {
+                                "description": "the first library in set",
+                                "value": "1"
+                            },
+                            "secondLibrary": {
+                                "description": "the second library in set",
+                                "value": "2"
+                            },
+                            "thirdLibrary": {
+                                "description": "the third library in set",
+                                "value": "3"
+                            },
                         }
                     }
                 ],
@@ -62,6 +92,9 @@
                 }
             },
             "delete": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Delete a library with the given id",
                 "description": "Deletes a library if given id exists.",
                 "requestBody": {
@@ -96,6 +129,9 @@
         },
         "/api/library/name/{name}": {
             "get": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Get libraries by name",
                 "description": "Returns libraries matching the given name.",
                 "parameters": [
@@ -106,6 +142,20 @@
                         "description": "The name of the libraries",
                         "schema": {
                             "type": "string"
+                        },
+                        "examples": {
+                            "CityLibrary": {
+                                "description": "the main city library",
+                                "value": "Gradska knjižnica"
+                            },
+                            "LjubljanicaLibrary": {
+                                "description": "the library in Ljubljanica",
+                                "value": "Knjižnica Ljubljanica"
+                            },
+                            "KnezijaLibrary": {
+                                "description": "the library in Knežija",
+                                "value": "Knjižnica Knežija"
+                            },
                         }
                     }
                 ],
@@ -116,7 +166,7 @@
                             "application/json": {
                                 "schema": {
                                     "type": "array",
-                                    "items": {
+                                    "response": {
                                         "$ref": "#/components/schemas/Library"
                                     }
                                 }
@@ -134,6 +184,9 @@
         },
         "/api/library/address/{address}": {
             "get": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Get libraries by address",
                 "description": "Returns libraries matching the given address.",
                 "parameters": [
@@ -144,6 +197,20 @@
                         "description": "The address of the libraries",
                         "schema": {
                             "type": "string"
+                        },
+                        "examples": {
+                            "KrvaviMost": {
+                                "description": "the library on Krvavi most",
+                                "value": "Krvavi most 2"
+                            },
+                            "Ljubljanica": {
+                                "description": "the library in Ljubljanica",
+                                "value": "Ljubljanica 24"
+                            },
+                            "Albaharijeva": {
+                                "description": "the library in Albaharijeva",
+                                "value": "Albaharijeva 7"
+                            },
                         }
                     }
                 ],
@@ -154,7 +221,62 @@
                             "application/json": {
                                 "schema": {
                                     "type": "array",
-                                    "items": {
+                                    "response": {
+                                        "$ref": "#/components/schemas/Library"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Libraries not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/api/library/manager/{manager}": {
+            "get": {
+                "tags": [
+                    "single"
+                ],
+                "summary": "Get library by manager",
+                "description": "Returns libraries matching the given manager.",
+                "parameters": [
+                    {
+                        "name": "manager",
+                        "in": "path",
+                        "required": true,
+                        "description": "The manager of the library",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "Marija": {
+                                "description": "the library whose manager is Marija Popović",
+                                "value": "Marija Popović"
+                            },
+                            "Ana": {
+                                "description": "the library whose manager is Ana Bakarić",
+                                "value": "Ana Bakarić"
+                            },
+                            "Albaharijeva": {
+                                "description": "the library whose manager is dr. sc. Jasna Kovačević",
+                                "value": "dr. sc. Jasna Kovačević"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of libraries",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "response": {
                                         "$ref": "#/components/schemas/Library"
                                     }
                                 }
@@ -172,6 +294,9 @@
         },
         "/api/library/create": {
             "post": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Create a new library",
                 "description": "Adds a new library to the system.",
                 "requestBody": {
@@ -206,6 +331,9 @@
         },
         "/api/library/update": {
             "put": {
+                "tags": [
+                    "single"
+                ],
                 "summary": "Update info of an existing library",
                 "description": "Updates info of an existing library.",
                 "requestBody": {
@@ -294,5 +422,11 @@
                 }
             }
         }
-    }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080/api/library/all",
+            "description": "Production server"
+        }
+    ]
 }

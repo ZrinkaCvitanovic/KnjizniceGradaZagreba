@@ -25,33 +25,33 @@ class Library {
 
   factory Library.fromJson(Map<String, dynamic> json) {
     return Library(
-      id: json['_id'],
-      name: json['Naziv'],
-      address: json['Adresa'],
-      phone: json['Kontakt_telefon'],
-      mail: json['Kontakt_mail'],
-      manager: json['Voditelj'],
-      workingTime: (json['radno_vrijeme'] as List<dynamic>)
+      id: json['id'],
+      name: json['name'],
+      address: json['address'],
+      phone: json['phone'],
+      mail: json['email'],
+      manager: json['manager'],
+      workingTime: (json['workingHours'] as List<dynamic>)
           .map((element) => WorkingTime.fromJson(element as Map<String, dynamic>))
           .toList(),
-      hasWifi: json['Nudi_wifi'],
-      hasWarmDrinks: json['Nudi_tople_napitke'],
-      hasComputers: json['Nudi_racunalo'],
+      hasWifi: json['hasWifi'],
+      hasWarmDrinks: json['hasWarmDrinks'],
+      hasComputers: json['hasComputers'],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'id': id,
-    'naziv': name,
-    'adresa': address,
-    'kontaktTelefon': phone,
-    'kontaktMail': mail,
-    'voditelj': manager,
-    'radnoVrijeme': workingTime.map((time) => time.toJson()).toList(),
-    'nudiWifi': hasWifi,
-    'nudiTopleNapitke': hasWarmDrinks,
-    'nudiRacunalo': hasComputers,
-  };
+        'id': id,
+        'name': name,
+        'address': address,
+        'phone': phone,
+        'email': mail,
+        'manager': manager,
+        'workingHours': workingTime.map((time) => time.toJson()).toList(),
+        'hasWifi': hasWifi,
+        'hasWarmDrinks': hasWarmDrinks,
+        'hasComputers': hasComputers,
+      };
 }
 
 class WorkingTime {
@@ -65,15 +65,15 @@ class WorkingTime {
 
   factory WorkingTime.fromJson(Map<String, dynamic> json) {
     return WorkingTime(
-      days: json['dani'],
-      hours: json['sati'],
+      days: json['days'],
+      hours: json['hours'],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'dani': days,
-    'sati': hours,
-  };
+        'days': days,
+        'hours': hours,
+      };
 
   @override
   String toString() => "$days: $hours";

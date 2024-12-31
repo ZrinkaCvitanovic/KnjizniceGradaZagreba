@@ -9,7 +9,7 @@ class ApiClient {
   }
 
   Future<List<Library>> getLibraries() async {
-    final response = await _httpClient.get("http://localhost:3000/libraries");
+    final response = await _httpClient.get("http://localhost:8080/api/library/all");
     return (response.data as List<dynamic>)
         .map((element) => Library.fromJson(element as Map<String, dynamic>))
         .toList();

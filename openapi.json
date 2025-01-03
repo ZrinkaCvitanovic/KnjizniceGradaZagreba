@@ -8,7 +8,7 @@
     "tags": [
         {
             "name": "single",
-            "description": "Operations related to single elements",
+            "description": "Operations related to single elements"
         },
         {
             "name": "collection",
@@ -68,7 +68,7 @@
                             "thirdLibrary": {
                                 "description": "the third library in set",
                                 "value": "3"
-                            },
+                            }
                         }
                     }
                 ],
@@ -155,7 +155,7 @@
                             "KnezijaLibrary": {
                                 "description": "the library in Knežija",
                                 "value": "Knjižnica Knežija"
-                            },
+                            }
                         }
                     }
                 ],
@@ -210,7 +210,7 @@
                             "Albaharijeva": {
                                 "description": "the library in Albaharijeva",
                                 "value": "Albaharijeva 7"
-                            },
+                            }
                         }
                     }
                 ],

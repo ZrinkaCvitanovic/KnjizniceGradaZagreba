@@ -5,7 +5,6 @@ const cors = require("cors");
 const app = express();
 const port = 8080;
 
-// Enable Cross-Origin Resource Sharing
 app.use(cors());
 app.use(express.json());
 
@@ -13,7 +12,6 @@ const mongoUrl = "mongodb://testuser:password@mongodb:27017";
 const dbName = "podaci";
 let db;
 
-// Connect to MongoDB
 async function connectToMongoDB() {
     const client = new MongoClient(mongoUrl);
     await client.connect();
@@ -24,7 +22,6 @@ async function connectToMongoDB() {
     console.log(libraries);
 }
 
-// Endpoint to fetch all libraries
 app.get("/api/library/all", async (req, res) => {
     try {
         const librariesCollection = db.collection("knjiznice");
@@ -36,7 +33,6 @@ app.get("/api/library/all", async (req, res) => {
     }
 });
 
-// Endpoint to fetch a single item by ID
 app.get("/api/library/id/:id", async (req, res) => {
     try {
         const librariesCollection = db.collection("knjiznice");
@@ -75,24 +71,20 @@ app.get("/api/library/hasComputer", async (req, res) => {
     }
 });
 
-// POST endpoint to add a new item -> RADI!
 app.post("/api/library", async (req, res) => {
     try {
-        const libraryData = req.body; // Get data from request body
-
-        // Generate a new _id for the library
+        const libraryData = req.body; 
         const { ObjectId } = require("mongodb");
         libraryData._id = new ObjectId();
 
         const librariesCollection = db.collection("knjiznice");
 
-        // Insert the new library document
         const result = await librariesCollection.insertOne(libraryData);
 
         res.status(201).json({
             success: true,
             message: "Library created successfully",
-            data: { _id: result.insertedId, ...libraryData }, // The newly created document
+            data: { _id: result.insertedId, ...libraryData },
         });
     } catch (error) {
         console.error("Error creating library:", error);
@@ -100,23 +92,20 @@ app.post("/api/library", async (req, res) => {
     }
 });
 
-// PUT endpoint to update an item by ID
 app.put("/api/library/id/:id", async (req, res) => {
     try {
-        const { id } = req.params; // Get the ID from the route parameter
-        const updates = req.body; // Get the updates from the request body
+        const { id } = req.params; 
+        const updates = req.body; 
 
-        // Validate the ID
         if (!ObjectId.isValid(id)) {
             return res.status(400).json({ success: false, message: "Invalid ID format" });
         }
 
         const librariesCollection = db.collection("knjiznice");
 
-        // Perform the update, excluding the `_id` field from updates
         const result = await librariesCollection.updateOne(
-            { _id: new ObjectId(id) }, // Find the document by _id
-            { $set: updates } // Apply updates
+            { _id: new ObjectId(id) }, 
+            { $set: updates } 
         );
 
         if (result.matchedCount === 0) {
@@ -133,7 +122,6 @@ app.put("/api/library/id/:id", async (req, res) => {
     }
 });
 
-// DELETE endpoint to delete an item by ID -> radi
 app.delete("/api/library/id/:id", async (req, res) => {
     try {
         const librariesCollection = db.collection("knjiznice");
@@ -150,13 +138,11 @@ app.delete("/api/library/id/:id", async (req, res) => {
     }
 });
 
-// Middleware to handle errors
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json(wrapResponse(null, "Internal Server Error"));
 });
 
-// Start the server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
@@ -167,5 +153,4 @@ const wrapResponse = (data, message = "Success") => ({
     data: data,
 });
 
-// Connect to MongoDB when the server starts
 connectToMongoDB().catch((error) => console.error("Failed to connect to MongoDB:", error));

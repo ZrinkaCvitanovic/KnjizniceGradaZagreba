@@ -40,7 +40,7 @@
                 }
             }
         },
-        "/api/library/{id}": {
+        "/api/library/id/{id}": {
             "get": {
                 "tags": [
                     "single"
@@ -125,211 +125,7 @@
                         "description": "Internal server error"
                     }
                 }
-            }
-        },
-        "/api/library/name/{name}": {
-            "get": {
-                "tags": [
-                    "single"
-                ],
-                "summary": "Get libraries by name",
-                "description": "Returns libraries matching the given name.",
-                "parameters": [
-                    {
-                        "name": "name",
-                        "in": "path",
-                        "required": true,
-                        "description": "The name of the libraries",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "examples": {
-                            "CityLibrary": {
-                                "description": "the main city library",
-                                "value": "Gradska knjižnica"
-                            },
-                            "LjubljanicaLibrary": {
-                                "description": "the library in Ljubljanica",
-                                "value": "Knjižnica Ljubljanica"
-                            },
-                            "KnezijaLibrary": {
-                                "description": "the library in Knežija",
-                                "value": "Knjižnica Knežija"
-                            }
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "A list of libraries",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "array",
-                                    "response": {
-                                        "$ref": "#/components/schemas/Library"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Libraries not found"
-                    },
-                    "500": {
-                        "description": "Internal server error"
-                    }
-                }
-            }
-        },
-        "/api/library/address/{address}": {
-            "get": {
-                "tags": [
-                    "single"
-                ],
-                "summary": "Get libraries by address",
-                "description": "Returns libraries matching the given address.",
-                "parameters": [
-                    {
-                        "name": "address",
-                        "in": "path",
-                        "required": true,
-                        "description": "The address of the libraries",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "examples": {
-                            "KrvaviMost": {
-                                "description": "the library on Krvavi most",
-                                "value": "Krvavi most 2"
-                            },
-                            "Ljubljanica": {
-                                "description": "the library in Ljubljanica",
-                                "value": "Ljubljanica 24"
-                            },
-                            "Albaharijeva": {
-                                "description": "the library in Albaharijeva",
-                                "value": "Albaharijeva 7"
-                            }
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "A list of libraries",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "array",
-                                    "response": {
-                                        "$ref": "#/components/schemas/Library"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Libraries not found"
-                    },
-                    "500": {
-                        "description": "Internal server error"
-                    }
-                }
-            }
-        },
-        "/api/library/manager/{manager}": {
-            "get": {
-                "tags": [
-                    "single"
-                ],
-                "summary": "Get library by manager",
-                "description": "Returns libraries matching the given manager.",
-                "parameters": [
-                    {
-                        "name": "manager",
-                        "in": "path",
-                        "required": true,
-                        "description": "The manager of the library",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "examples": {
-                            "Marija": {
-                                "description": "the library whose manager is Marija Popović",
-                                "value": "Marija Popović"
-                            },
-                            "Ana": {
-                                "description": "the library whose manager is Ana Bakarić",
-                                "value": "Ana Bakarić"
-                            },
-                            "Albaharijeva": {
-                                "description": "the library whose manager is dr. sc. Jasna Kovačević",
-                                "value": "dr. sc. Jasna Kovačević"
-                            }
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "A list of libraries",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "array",
-                                    "response": {
-                                        "$ref": "#/components/schemas/Library"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Libraries not found"
-                    },
-                    "500": {
-                        "description": "Internal server error"
-                    }
-                }
-            }
-        },
-        "/api/library/create": {
-            "post": {
-                "tags": [
-                    "single"
-                ],
-                "summary": "Create a new library",
-                "description": "Adds a new library to the system.",
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Library"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "Library created successfully",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Library"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Invalid input"
-                    },
-                    "500": {
-                        "description": "Internal server error"
-                    }
-                }
-            }
-        },
-        "/api/library/update": {
+            },
             "put": {
                 "tags": [
                     "single"
@@ -349,6 +145,125 @@
                 "responses": {
                     "200": {
                         "description": "Library info updated successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Library"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/api/library/hasWifi": {
+            "get": {
+                "tags": [
+                    "collection"
+                ],
+                "summary": "Get libraries by name",
+                "description": "Returns libraries matching the given name.",
+                "parameters": [
+                    {
+                        "Nudi_wifi": "da",
+                        "in": "path",
+                        "required": true,
+                        "description": "Availability of Wifi",
+                        "schema": {
+                            "type": "string"
+                        },
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of libraries with Wifi",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "response": {
+                                        "$ref": "#/components/schemas/Library"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Libraries not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/api/library/hasComputer": {
+            "get": {
+                "tags": [
+                    "collection"
+                ],
+                "summary": "Get libraries by address",
+                "description": "Returns libraries matching the given address.",
+                "parameters": [
+                    {
+                        "Nudi_racunalo": "da",
+                        "in": "path",
+                        "required": true,
+                        "description": "The address of the libraries",
+                        "schema": {
+                            "type": "string"
+                        },
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of libraries",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "response": {
+                                        "$ref": "#/components/schemas/Library"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Libraries not found"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/api/library": {
+            "post": {
+                "tags": [
+                    "single"
+                ],
+                "summary": "Create a new library",
+                "description": "Adds a new library to the system.",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Library"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Library created successfully",
                         "content": {
                             "application/json": {
                                 "schema": {

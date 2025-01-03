@@ -26,31 +26,32 @@ class Library {
   factory Library.fromJson(Map<String, dynamic> json) {
     return Library(
       id: json['id'],
-      name: json['name'],
-      address: json['address'],
-      phone: json['phone'],
-      mail: json['email'],
-      manager: json['manager'],
-      workingTime: (json['workingHours'] as List<dynamic>)
-          .map((element) => WorkingTime.fromJson(element as Map<String, dynamic>))
+      name: json['Naziv'],
+      address: json['Adresa'],
+      phone: json['Kontakt_telefon'],
+      mail: json['Kontakt_mail'],
+      manager: json['Voditelj'],
+      workingTime: (json['radno_vrijeme'] as List<dynamic>)
+          .map((element) =>
+              WorkingTime.fromJson(element as Map<String, dynamic>))
           .toList(),
-      hasWifi: json['hasWifi'],
-      hasWarmDrinks: json['hasWarmDrinks'],
-      hasComputers: json['hasComputers'],
+      hasWifi: json['Nudi_wifi'],
+      hasWarmDrinks: json['Nudi_tople_napitke'],
+      hasComputers: json['Nudi_racunalo'],
     );
   }
 
   Map<String, dynamic> toJson() => {
         'id': id,
-        'name': name,
-        'address': address,
-        'phone': phone,
-        'email': mail,
-        'manager': manager,
-        'workingHours': workingTime.map((time) => time.toJson()).toList(),
-        'hasWifi': hasWifi,
-        'hasWarmDrinks': hasWarmDrinks,
-        'hasComputers': hasComputers,
+        'Naziv': name,
+        'Adresa': address,
+        'Kontakt_telefon': phone,
+        'Kontakt_mail': mail,
+        'Voditelj': manager,
+        'radno_vrijeme': workingTime.map((time) => time.toJson()).toList(),
+        'Nudi_wifi': hasWifi,
+        'Nudi_tople_napitke': hasWarmDrinks,
+        'Nudi_racunalo': hasComputers,
       };
 }
 
@@ -65,14 +66,14 @@ class WorkingTime {
 
   factory WorkingTime.fromJson(Map<String, dynamic> json) {
     return WorkingTime(
-      days: json['days'],
-      hours: json['hours'],
+      days: json['dani'],
+      hours: json['sati'],
     );
   }
 
   Map<String, dynamic> toJson() => {
-        'days': days,
-        'hours': hours,
+        'dani': days,
+        'sati': hours,
       };
 
   @override

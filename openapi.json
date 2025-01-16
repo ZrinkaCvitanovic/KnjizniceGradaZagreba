@@ -177,7 +177,7 @@
                         "description": "Availability of Wifi",
                         "schema": {
                             "type": "string"
-                        },
+                        }
                     }
                 ],
                 "responses": {
@@ -218,7 +218,7 @@
                         "description": "The address of the libraries",
                         "schema": {
                             "type": "string"
-                        },
+                        }
                     }
                 ],
                 "responses": {

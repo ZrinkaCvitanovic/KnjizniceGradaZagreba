@@ -80,9 +80,9 @@ class StartPage extends StatelessWidget {
                               vertical: 20, horizontal: 120),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/datatable');
+                          Navigator.pushNamed(context, '/login');
                         },
-                        child: const Text('Pretraga'),
+                        child: const Text('Prijava'),
                       ),
                     ],
                   ),
@@ -97,7 +97,7 @@ class StartPage extends StatelessWidget {
 
   void _redirectToHomePage(final BuildContext context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const HomePage()),
+      MaterialPageRoute(builder: (_) => const LoginPage()),
     );
   }
 }

@@ -296,7 +296,7 @@
                     },
                     "address": {
                         "@context": "https://schema.org/",
-                        "@type": "name",
+                        "@type": "address",
                         "type": "string"
                     },
                     "manager": {

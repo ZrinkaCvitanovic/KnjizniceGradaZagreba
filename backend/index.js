@@ -5,10 +5,15 @@ const cors = require("cors");
 const app = express();
 const port = 8080;
 
+const jwt = require("jsonwebtoken");
+const { auth, requiresAuth } = require("express-openid-connect");
+const dotenv = require("dotenv");
+dotenv.config();
+
 app.use(cors());
 app.use(express.json());
 
-const mongoUrl = "mongodb://testuser:password@mongodb:27017";
+const mongoUrl = "mongodb://testuser:password@localhost:27017";
 const dbName = "podaci";
 let db;
 
@@ -73,7 +78,7 @@ app.get("/api/library/hasComputer", async (req, res) => {
 
 app.post("/api/library", async (req, res) => {
     try {
-        const libraryData = req.body; 
+        const libraryData = req.body;
         const { ObjectId } = require("mongodb");
         libraryData._id = new ObjectId();
 
@@ -94,8 +99,8 @@ app.post("/api/library", async (req, res) => {
 
 app.put("/api/library/id/:id", async (req, res) => {
     try {
-        const { id } = req.params; 
-        const updates = req.body; 
+        const { id } = req.params;
+        const updates = req.body;
 
         if (!ObjectId.isValid(id)) {
             return res.status(400).json({ success: false, message: "Invalid ID format" });
@@ -103,10 +108,7 @@ app.put("/api/library/id/:id", async (req, res) => {
 
         const librariesCollection = db.collection("knjiznice");
 
-        const result = await librariesCollection.updateOne(
-            { _id: new ObjectId(id) }, 
-            { $set: updates } 
-        );
+        const result = await librariesCollection.updateOne({ _id: new ObjectId(id) }, { $set: updates });
 
         if (result.matchedCount === 0) {
             return res.status(404).json({ success: false, message: "Library not found" });
@@ -151,6 +153,47 @@ const wrapResponse = (data, message = "Success") => ({
     status: "success",
     message: message,
     data: data,
+});
+
+app.get("/api-spec", (req, res) => {
+    res.sendFile(__dirname + "/openapi.json");
+});
+
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: "a long, randomly-generated string stored in env",
+    baseURL: "http://localhost:8080",
+    clientID: "ix1BhVY2oPVQx8XOEpc6K20FQNQz3xTN",
+    issuerBaseURL: "https://dev-t28ghi7bovcfgijv.us.auth0.com",
+    //issuerBaseURL: "https://dev-0a66pm1zz2c5mu0u.us.auth0.com",
+    //https://dev-t28ghi7bovcfgijv.us.auth0.com/login
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+app.get("/", (req, res) => {
+    if (req.oidc.isAuthenticated()) {
+        const token = jwt.sign({ sub: req.oidc.user.sub }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const redirectUrl = `http://localhost:8080/token?token=${token}`;
+        res.redirect(redirectUrl);
+    } else {
+        res.status(401).send("Not authenticated");
+    }
+});
+
+app.get("/token", (req, res) => {
+    const token = req.query.token;
+    res.send(`<script>window.opener.postMessage('${token}', '*'); window.close();</script>`);
+});
+
+app.get("/profile", requiresAuth(), (req, res) => {
+    res.send(JSON.stringify(req.oidc.user));
+});
+
+app.get("/logout", (req, res) => {
+    res.oidc.logout();
 });
 
 connectToMongoDB().catch((error) => console.error("Failed to connect to MongoDB:", error));

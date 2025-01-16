@@ -291,9 +291,12 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string"
+                        "@context": "https://schema.org/",
+                        "@type": "name"
                     },
                     "address": {
+                        "@context": "https://schema.org/",
+                        "@type": "name",
                         "type": "string"
                     },
                     "manager": {

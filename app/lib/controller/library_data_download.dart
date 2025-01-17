@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:web_library_fe/controller/library_notifier.dart';
-import 'package:web_library_fe/controller/list_state.dart';
+import 'library_notifier.dart';
+import 'list_state.dart';
 
 final libraryNotifierProvider = NotifierProvider<LibraryNotifier, ListState>(
   () => LibraryNotifier(),
@@ -73,7 +73,7 @@ class RefreshButton extends ConsumerWidget {
             ),
           ),
           onPressed: libraryNotifier.exportToJSON,
-          child: const Text("Export to JSON"),
+          child: const Text("Preuzmi osvježene preslike JSON"),
         ),
         const SizedBox(width: 50),
         ElevatedButton(
@@ -87,7 +87,7 @@ class RefreshButton extends ConsumerWidget {
             ),
           ),
           onPressed: libraryNotifier.exportToCSV,
-          child: const Text("Export to CSV"),
+          child: const Text("Preuzmi osvježene preslike CSV"),
         ),
       ],
     );

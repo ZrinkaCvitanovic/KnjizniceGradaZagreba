@@ -13,7 +13,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-const mongoUrl = "mongodb://testuser:password@localhost:27017";
+const mongoUrl = "mongodb://testuser:password@mongodb:27017";
 const dbName = "podaci";
 let db;
 

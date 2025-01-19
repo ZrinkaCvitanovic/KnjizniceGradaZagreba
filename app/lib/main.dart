@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:web_library_fe/pages/home_page.dart';
+import 'package:web_library_fe/pages/profile_page.dart';
+
 import 'pages/start_page.dart';
 
 void main() async => runApp(ProviderScope(child: const MainApp()));
@@ -20,6 +22,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const StartPage(),
         '/datatable': (context) => const HomePage(),
+        '/profile': (context) => const ProfileScreen(),
       },
       builder: (context, child) {
         return Scaffold(

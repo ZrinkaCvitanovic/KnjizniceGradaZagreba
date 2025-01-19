@@ -188,8 +188,33 @@ app.get("/token", (req, res) => {
     res.send(`<script>window.opener.postMessage('${token}', '*'); window.close();</script>`);
 });
 
+app.get("/#/profile", requiresAuth(), (req, res) => {
+    try {
+        const userData = req.oidc.user;
+
+        if (!userData) {
+            return res.status(404).json({
+                status: "error",
+                message: "User not found",
+            });
+        }
+
+        res.json({
+            status: "success",
+            data: userData,
+        });
+    } catch (error) {
+        console.error("Error fetching profile:", error);
+        res.status(500).json({
+            status: "error",
+            message: "Internal server error",
+        });
+    }
+});
+
 app.get("/profile", requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
+    //    { "sid": "7xvYeHNYiOwwDdd20AziO5Cx9FO7vZK1", "nickname": "or", "name": "or@or.hr", "picture": "https://s.gravatar.com/avatar/6b6cb91d20473078f5fb642ac782bfed?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2For.png", "updated_at": "2025-01-19T17:39:40.669Z", "email": "or@or.hr", "email_verified": false, "sub": "auth0|6784f7ca6db6f235a0873045" }
 });
 
 app.get("/logout", (req, res) => {
